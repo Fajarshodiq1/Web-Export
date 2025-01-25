@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.nds {
+    @apply w-12 h-12 mb-2 rounded-full bg-white shadow-xl flex justify-center items-center transition-transform transform opacity-0 scale-0;
+}
+
+.show .nds {
+    @apply opacity-100 scale-100;
+}
+
+.ilink {
+    @apply text-white no-underline;
+}
+
+.open .ri-add-line {
+    @apply hidden;
+}
+
+.open .ri-subtract-line {
+    @apply block;
+}
+
+.btn-primary {
+    @apply flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg;
+}
+.shadow-primary {
+    @apply shadow-[0_2px_10px_-3px_rgba(34,197,94,0.3)];
+}
