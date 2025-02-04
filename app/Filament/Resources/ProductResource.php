@@ -44,20 +44,11 @@ class ProductResource extends Resource
                         ->maxLength(255),
                     Forms\Components\Textarea::make('about')
                             ->required(),
-                    Forms\Components\TextInput::make('price')
-                            ->required()
-                            ->numeric()
-                            ->prefix('IDR'),
                     Forms\Components\Select::make('is_open')
                             ->options([
                                 true => 'Open',
                                 false => 'Not Available',
                             ]),
-                    Forms\Components\Select::make('category_id')
-                            ->relationship('category', 'name')
-                            ->searchable()
-                            ->preload()
-                            ->required(),
                     Forms\Components\FileUpload::make('thumbnail')
                             ->image()
                             ->required(),
@@ -71,27 +62,7 @@ class ProductResource extends Resource
                             ->image()
                             ->required(),                
                         ]),
-                Fieldset::make('Spesification')
-                ->schema([
-                    Forms\Components\TextInput::make('appearance')
-                        ->required()
-                        ->maxLength(255),
-                    Forms\Components\TextInput::make('mesh')
-                        ->required()
-                        ->maxLength(255),
-                    Forms\Components\TextInput::make('plant_used')
-                        ->required()
-                        ->maxLength(255),
-                    Forms\Components\TextInput::make('active_ingridient')
-                        ->required()
-                        ->maxLength(255),
-                    Forms\Components\TextInput::make('sample')
-                        ->required()
-                        ->maxLength(255),
-                    Forms\Components\TextInput::make('self_life')
-                        ->required()
-                        ->maxLength(255),
-                ]),
+
                 Fieldset::make('Port')
                 ->schema([
                     Forms\Components\Repeater::make('ports')
@@ -111,7 +82,20 @@ class ProductResource extends Resource
                                 ->required()
                                 ->maxLength(255),
                     ]),
-                ])
+                ]),
+                Fieldset::make('Spesification')
+                ->schema([
+                    Forms\Components\Repeater::make('spesifications')
+                        ->relationship('spesifications')
+                        ->schema([
+                            Forms\Components\TextInput::make('detail')
+                                ->required()
+                                ->maxLength(255),
+                            Forms\Components\TextInput::make('spek')
+                                ->required()
+                                ->maxLength(255),
+                    ]),
+                ]),
             ]);
     }
 
@@ -121,14 +105,15 @@ class ProductResource extends Resource
             ->columns([
                 Tables\Columns\ImageColumn::make('thumbnail'),
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('category.name'),
-                Tables\Columns\TextColumn::make('price'),
+                ->searchable(),
+                Tables\Columns\TextColumn::make('about'),
+                
             ])
             ->filters([
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])

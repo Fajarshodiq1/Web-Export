@@ -24,7 +24,7 @@
         <div class="hidden md:block w-full md:w-auto rounded-lg mt-10 lg:mt-0" id="mobile-menu">
             <ul class="flex-col md:flex-row flex md:space-x-14 mt-4 md:mt-0 md:text-sm md:font-medium">
                 <li>
-                    <a href=""
+                    <a href="{{ route('index') }}"
                         class="md:bg-transparent hover:text-white block pl-3 pr-4 py-2 md:hover:text-green-700 text-white md:p-0 rouded md:rounded-none focus:outline-none border-b-2 border-transparent hover:border-green-500"
                         aria-current="page">Home</a>
                 </li>
@@ -47,16 +47,16 @@
                         <div class="bg-white rounded w-full relative z-10 py-1">
                             <ul class="list-reset">
                                 <li class="relative" @mouseenter="showChildren=true">
-                                    <a href=""
+                                    <a href="{{ route('about') }}#cpr"
                                         class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                                        <span class="flex-1">Why Us</span>
+                                        <span class="flex-1">CPR</span>
                                         <span class="ml-2"> <i class="mdi mdi-chevron-right"></i> </span>
                                     </a>
                                 </li>
                                 <li class="relative" @mouseenter="showChildren=true">
-                                    <a href=""
+                                    <a href="{{ route('about') }}#value"
                                         class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                                        <span class="flex-1">Our Resource</span>
+                                        <span class="flex-1">4 Values</span>
                                         <span class="ml-2"> <i class="mdi mdi-chevron-right"></i> </span>
                                     </a>
                                 </li>
@@ -106,7 +106,7 @@
                                     </a>
                                 </li>
                                 <li class="relative">
-                                    <a href=""
+                                    <a href="{{ route('about') }}#tabs-home02"
                                         class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
                                         <span class="flex-1">Our Resource</span>
                                         <span class="ml-2"><i class="mdi mdi-chevron-right"></i></span>
@@ -137,14 +137,14 @@
                 </li>
 
                 <li>
-                    <a href=""
+                    <a href="{{ route('products') }}"
                         class="md:bg-transparent hover:text-white block pl-3 pr-4 py-2 md:hover:text-green-700 text-white md:p-0 rouded md:rounded-none focus:outline-none border-b-2 border-transparent hover:border-green-500"
                         aria-current="page">
                         Products</a>
                 </li>
 
                 <li>
-                    <a href=""
+                    <a href="{{ route('contact') }}"
                         class="md:bg-transparent hover:text-white block pl-3 pr-4 py-2 md:hover:text-green-700 text-white md:p-0 rouded md:rounded-none focus:outline-none border-b-2 border-transparent hover:border-green-500"
                         aria-current="page">Contact</a>
                 </li>

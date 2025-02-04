@@ -22,18 +22,8 @@ return new class extends Migration
             $table->string('thumbnail2');
             $table->string('thumbnail3');
             $table->string('thumbnail4');
-            $table->string('appearance');
-            $table->string('mesh');
-            $table->string('plant_used');
-            $table->string('active_ingridient');
-            $table->string('sample');
-            $table->string('self_life');
-
-            $table->unsignedBigInteger('price');
 
             $table->boolean('is_open');
-
-            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
 
             $table->softDeletes();
             $table->timestamps();

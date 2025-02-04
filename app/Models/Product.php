@@ -22,19 +22,9 @@ class Product extends Model
         'thumbnail2',
         'thumbnail3',
         'thumbnail4',
-        'appearance',
-        'mesh',
-        'plant_used',
-        'appearance',
-        'active_ingridient',
-        'sample',
-        'self_life',
-        'about',
-        'price',
         'is_open',
-        'category_id',
     ];
-    public function setNameAttribute($value)
+   public function setNameAttribute($value)
     {
         $this->attributes['name'] = $value;
         $this->attributes['slug'] = Str::slug($value); 
@@ -48,9 +38,8 @@ class Product extends Model
     {
         return $this->hasMany(Packing::class);
     }
-         public function category(): BelongsTo
+    public function spesifications(): HasMany
     {
-        return $this->belongsTo(Category::class, 'category_id');
+        return $this->hasMany(Spesification::class);
     }
-
 }

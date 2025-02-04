@@ -4,6 +4,10 @@ use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'index'])->name('index');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/template', [PageController::class, 'template'])->name('template');
+Route::get('/products', [PageController::class, 'products'])->name('products');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 // Rute Untuk Melihat Kategori
 Route::get('/browse/{category:slug}', [PageController::class, 'category'])->name('front.category');

@@ -8,13 +8,21 @@ export default {
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
+        "./node_modules/tw-elements/js/**/*.js",
+        "./node_modules/versoly-ui/**/*.js",
     ],
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                sans: ["Figtree"],
+                inter: ["Inter", "sans-serif"],
             },
         },
     },
-    plugins: [],
+    plugins: [
+        require("preline/plugin"),
+        require("tw-elements/plugin.cjs"),
+        require("@tailwindcss/typography"),
+    ],
+    darkMode: "class",
 };

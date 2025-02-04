@@ -100,37 +100,14 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td class="py-3 px-4 text-left font-medium text-gray-600">Name
-                                                            </td>
-                                                            <td class="py-3 px-4 text-left">{{ $product->name }}</td>
-                                                        </tr>
-                                                        <tr class="bg-gray-50">
-                                                            <td class="py-3 px-4 text-left font-medium text-gray-600">
-                                                                Curcumin</td>
-                                                            <td class="py-3 px-4 text-left">> 3%</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="py-3 px-4 text-left font-medium text-gray-600">Sieve
-                                                            </td>
-                                                            <td class="py-3 px-4 text-left">0.4</td>
-                                                        </tr>
-                                                        <tr class="bg-gray-50">
-                                                            <td class="py-3 px-4 text-left font-medium text-gray-600">Colour
-                                                            </td>
-                                                            <td class="py-3 px-4 text-left">Yellow</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="py-3 px-4 text-left font-medium text-gray-600">
-                                                                Foreign Stuff</td>
-                                                            <td class="py-3 px-4 text-left">0%</td>
-                                                        </tr>
-                                                        <tr class="bg-gray-50">
-                                                            <td class="py-3 px-4 text-left font-medium text-gray-600">
-                                                                Moisture Content</td>
-                                                            <td class="py-3 px-4 text-left">
-                                                                < 12%</td>
-                                                        </tr>
+                                                        @foreach ($spesifications as $spesification)
+                                                            <tr>
+                                                                <td class="py-3 px-4 text-left font-medium text-gray-600">
+                                                                    {{ $spesification->detail }}</td>
+                                                                <td class="py-3 px-4 text-left">{{ $spesification->spek }}
+                                                                </td>
+                                                            </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
 
