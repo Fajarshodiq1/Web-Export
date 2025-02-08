@@ -44,11 +44,6 @@ class ProductResource extends Resource
                         ->maxLength(255),
                     Forms\Components\Textarea::make('about')
                             ->required(),
-                    Forms\Components\Select::make('is_open')
-                            ->options([
-                                true => 'Open',
-                                false => 'Not Available',
-                            ]),
                     Forms\Components\FileUpload::make('thumbnail')
                             ->image()
                             ->required(),

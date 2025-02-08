@@ -22,9 +22,6 @@ return new class extends Migration
             $table->string('thumbnail2');
             $table->string('thumbnail3');
             $table->string('thumbnail4');
-
-            $table->boolean('is_open');
-
             $table->softDeletes();
             $table->timestamps();
         });

@@ -22,7 +22,6 @@ class Product extends Model
         'thumbnail2',
         'thumbnail3',
         'thumbnail4',
-        'is_open',
     ];
    public function setNameAttribute($value)
     {
