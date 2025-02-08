@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+// use App\Models\Category;
+
+use App\Models\Company;
+use App\Models\DocumentationProduct;
+use App\Models\DocumentationWarehouse;
 use App\Models\Hero;
 use App\Models\Product;
 use App\Models\Spesification;
@@ -13,16 +17,18 @@ class PageController extends Controller
     public function index(Request $request)
     {   
         $heroes = Hero::all();
+        $companies = Company::all();
         $products = Product::all();
-        $products = Product::paginate(3);
-        
-        return view('front.index', compact('heroes', 'products')); 
+        return view('front.index', compact('heroes', 'products', 'companies')); 
     }
-     public function details(Product $product)
-    {   
-        $spesifications = Spesification::all();
-        return view('front.details', compact('product', 'spesifications'));
-    }
+    public function details(Product $product)
+{   
+    $spesifications = $product->spesifications;
+    $products = Product::all(); 
+
+    return view('front.details', compact('product', 'products', 'spesifications'));
+}
+
 
      public function template()
     {
@@ -31,7 +37,9 @@ class PageController extends Controller
 
     public function about()
     {   
-        return view('front.about');
+        $product = DocumentationProduct::all();
+        $warehouse = DocumentationWarehouse::all();
+        return view('front.about', compact('product','warehouse'));
     }
     public function contact()
     {
@@ -40,7 +48,6 @@ class PageController extends Controller
     public function products()
     {   
         $products = Product::all();
-        $products = Product::paginate(6);
         return view('front.products', compact('products'));
     }
 }

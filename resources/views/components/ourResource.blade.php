@@ -120,7 +120,7 @@
               * Define SVG path for target icon
               */
              var targetSVG =
-                 "M0,5.5 C0,2.462434 2.238576,0 5,0 C7.761424,0 10,2.462434 10,5.5 C10,5.668539 9.993108,5.835307 9.979617,6 C10,9.005737 5,16 5,16 C5,16 0,9.022339 0,6 C0.006892,5.835307 0,5.668539 0,5.5 Z";
+                 "M256,0c-70.592,0-128,57.408-128,128c0,63.296,46.229,115.861,106.667,126.08v236.587 c0,11.776,9.536,21.333,21.333,21.333c11.797,0,21.333-9.557,21.333-21.333V254.08C337.771,243.861,384,191.296,384,128 C384,57.408,326.592,0,256,0z M234.667,128c-11.776,0-21.333-9.557-21.333-21.333s9.557-21.333,21.333-21.333 S256,94.891,256,106.667S246.443,128,234.667,128z";
 
              /**
               * Create the map
@@ -133,88 +133,125 @@
                      "map": "indonesiaLow",
                      "getAreasFromMap": true,
                      "images": [{
-                             "svgPath": targetSVG,
-                             "scale": 1.5,
-                             "accessibleLabel": "Aceh",
-                             "tabIndex": 2,
-                             "zoomLevel": 5,
-                             // "description": "<div class='description-image' style='background-image: url(http://via.placeholder.com/348x220/d2d2d2)'></div>This is a description of this marker<br> <a href='https://codepen.io/verticalgrain/pen/vWxprB'>test</a>",
                              "title": "Aceh",
-                             "latitude": 4.693845487278484,
-                             "longitude": 96.70931558270588
+                             "latitude": 4.6938,
+                             "longitude": 96.7093
                          },
                          {
-                             "svgPath": targetSVG,
-                             "scale": 1.5,
-                             "accessibleLabel": "Wonogiri",
-                             "tabIndex": 2,
-                             "zoomLevel": 5,
-                             // "description": "<div class='description-image' style='background-image: url(http://via.placeholder.com/348x220/d2d2d2)'></div>This is a description of this marker<br> <a href='https://codepen.io/verticalgrain/pen/vWxprB'>test</a>",
-                             "title": "Wonogiri",
-                             "latitude": -7.8962,
-                             "longitude": 110.9235
+                             "title": "Sumatera Utara",
+                             "latitude": 2.1587,
+                             "longitude": 99.4942
                          },
                          {
-                             "svgPath": targetSVG,
-                             "scale": 1.5,
-                             "accessibleLabel": "Malang",
-                             "tabIndex": 2,
-                             "zoomLevel": 5,
-                             // "description": "<div class='description-image' style='background-image: url(http://via.placeholder.com/348x220/d2d2d2)'></div>This is a description of this marker<br> <a href='https://codepen.io/verticalgrain/pen/vWxprB'>test</a>",
-                             "title": "Malang",
-                             "latitude": -7.9666,
-                             "longitude": 112.6326
+                             "title": "Riau",
+                             "latitude": 0.2823,
+                             "longitude": 101.6718
                          },
                          {
-                             "svgPath": targetSVG,
-                             "scale": 1.5,
-                             "accessibleLabel": "Pacitan",
-                             "tabIndex": 2,
-                             "zoomLevel": 5,
-                             // "description": "<div class='description-image' style='background-image: url(http://via.placeholder.com/348x220/d2d2d2)'></div>This is a description of this marker<br> <a href='https://codepen.io/verticalgrain/pen/vWxprB'>test</a>",
-                             "title": "Pacitan",
-                             "latitude": -8.1812,
-                             "longitude": 111.0750
+                             "title": "Sumatera Barat",
+                             "latitude": -0.7309,
+                             "longitude": 100.7887
                          },
                          {
-                             "svgPath": targetSVG,
-                             "scale": 1.5,
-                             "accessibleLabel": "Surabaya",
-                             "tabIndex": 2,
-                             "zoomLevel": 5,
-                             // "description": "<div class='description-image' style='background-image: url(http://via.placeholder.com/348x220/d2d2d2)'></div>This is a description of this marker<br> <a href='https://codepen.io/verticalgrain/pen/vWxprB'>test</a>",
-                             "title": "Surabaya",
-                             "latitude": -7.2575,
-                             "longitude": 112.7521
+                             "title": "Jambi",
+                             "latitude": -1.4999,
+                             "longitude": 102.4512
                          },
                          {
-                             "svgPath": targetSVG,
-                             "scale": 1.5,
-                             "accessibleLabel": "Gresik",
-                             "tabIndex": 2,
-                             "zoomLevel": 5,
-                             // "description": "<div class='description-image' style='background-image: url(http://via.placeholder.com/348x220/d2d2d2)'></div>This is a description of this marker<br> <a href='https://codepen.io/verticalgrain/pen/vWxprB'>test</a>",
-                             "title": "Gresik",
-                             "latitude": -7.1566,
-                             "longitude": 112.6555
+                             "title": "Bengkulu",
+                             "latitude": -3.5820,
+                             "longitude": 102.3478
                          },
                          {
-                             "svgPath": targetSVG,
-                             "scale": 1.5,
-                             "accessibleLabel": "Kediri",
-                             "tabIndex": 2,
-                             "zoomLevel": 5,
-                             // "description": "This is a description of this marker<br>",
-                             "title": "Kediri",
-                             "latitude": -7.8485,
-                             "longitude": 112.0170
+                             "title": "Sumatera Selatan",
+                             "latitude": -3.3020,
+                             "longitude": 103.9239
+                         },
+                         {
+                             "title": "Lampung",
+                             "latitude": -4.5617,
+                             "longitude": 105.3577
+                         },
+                         {
+                             "title": "Bangka Belitung",
+                             "latitude": -2.3207,
+                             "longitude": 106.0431
+                         },
+                         {
+                             "title": "Banten",
+                             "latitude": -6.4375,
+                             "longitude": 106.1265
+                         },
+                         {
+                             "title": "Jawa Barat",
+                             "latitude": -6.8456,
+                             "longitude": 107.6021
+                         },
+                         {
+                             "title": "Jawa Timur",
+                             "latitude": -7.6703,
+                             "longitude": 112.2252
+                         },
+                         {
+                             "title": "Jawa Tengah",
+                             "latitude": -7.3320,
+                             "longitude": 109.9080
+                         },
+                         {
+                             "title": "NTB",
+                             "latitude": -8.7285,
+                             "longitude": 117.2915
+                         },
+                         {
+                             "title": "NTT",
+                             "latitude": -8.6293,
+                             "longitude": 120.7971
+                         },
+                         {
+                             "title": "Sulawesi Utara",
+                             "latitude": 0.7188,
+                             "longitude": 124.2068
+                         },
+                         {
+                             "title": "Sulawesi Tengah",
+                             "latitude": -1.7137,
+                             "longitude": 120.8643
+                         },
+                         {
+                             "title": "Sulawesi Selatan",
+                             "latitude": -3.8580,
+                             "longitude": 119.9722
+                         },
+                         {
+                             "title": "Sulawesi Tenggara",
+                             "latitude": -4.1382,
+                             "longitude": 122.1791
+                         },
+                         {
+                             "title": "Maluku Utara",
+                             "latitude": 0.6879,
+                             "longitude": 127.9315
+                         },
+                         {
+                             "title": "Papua Barat",
+                             "latitude": -1.3150,
+                             "longitude": 132.8667
                          }
-                     ]
+                     ].map(location => ({
+                         "svgPath": targetSVG,
+                         "scale": 0.07,
+                         "accessibleLabel": location.title,
+                         "tabIndex": 2,
+                         "zoomLevel": 5,
+                         "title": location.title,
+                         "latitude": location.latitude,
+                         "longitude": location.longitude
+                     }))
                  },
                  "areasSettings": {
                      "unlistedAreasColor": "#737373",
                      "alpha": 1,
-                     "color": "#16a34a", // Green color for the areas
+                     "color": "#16a34a",
                      "outlineColor": "#FFFFFF",
                      "rollOverColor": "#FFCC00",
                      "selectedColor": "#FFCC00"
@@ -224,7 +261,7 @@
                      "rollOverScale": 1.5,
                      "selectedScale": 2,
                      "selectedColor": "#2D372D",
-                     "color": "#006DD1",
+                     "color": "red",
                      "accessibleLabel": "[[title]]",
                      "descriptionWindowLeft": 80,
                      "descriptionWindowTop": 278,

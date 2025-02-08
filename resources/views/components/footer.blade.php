@@ -1,5 +1,5 @@
 <div class="h-[30vh] md:h-[20vh] lg:h-[10vh]"></div>
-<footer class="w-full bg-gray-100 relative"
+<footer class="w-full bg-gray-100 relative overflow-hidden"
     style="background-image: url('{{ asset('assets/footer.jpg') }}'); background-size: cover; background-position: center;">
     <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Elemen ini menambahkan lapisan gelap -->
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
@@ -14,7 +14,7 @@
                 <p class="py-8 text-sm text-white lg:max-w-xs text-center lg:text-left">Trusted in more than 100
                     countries & 5 million customers. Have any query? contact us we are here for you.</p>
                 <a href="javascript:;"
-                    class="py-2.5 px-5 h-9 block w-fit bg-indigo-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-indigo-700 lg:mx-0">
+                    class="py-2.5 px-5 h-9 block w-fit bg-green-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-green-700 lg:mx-0">
                     Contact us
                 </a>
             </div>
@@ -39,16 +39,11 @@
             </div>
             <!--End Col-->
             <div class="lg:mx-auto text-left ">
-                <h4 class="text-lg text-white font-medium mb-7">Subscribe</h4>
-                <p class="text-sm text-white leading-6 mb-7">Subscribe to get the latest news from us</p>
+                <h4 class="text-lg text-white font-medium mb-7">Contact me</h4>
+                <p class="text-sm text-white leading-6 mb-7">Contact me to get the latest news from us</p>
                 <a href="javascript:;"
-                    class="flex items-center justify-center gap-2 border border-indigo-600 rounded-full py-3 px-6 w-fit lg:mx-0  text-sm text-indigo-600 font-semibold transition-all duration-500 hover:bg-indigo-50">Subscribe<svg
-                        width="15" height="12" viewBox="0 0 15 12" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5"
-                            stroke="#4F46E5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    class="flex items-center justify-center gap-2 border border-green-600 rounded-full py-3 px-6 w-fit lg:mx-0  text-sm text-green-600 font-semibold transition-all duration-500 hover:bg-green-50">Fast
+                    Contact <i class="ri-customer-service-line text-green-600"></i>
                 </a>
             </div>
         </div>
@@ -59,7 +54,7 @@
                     reserved.</span>
                 <div class="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
                     <a href="javascript:;"
-                        class="w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#33CCFF] hover:bg-gray-900">
+                        class="w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-gray-900">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                             fill="none">
                             <g id="Social Media">
@@ -69,8 +64,8 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="javascript:;"
-                        class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[linear-gradient(45deg,#FEE411_6.9%,#FEDB16_10.98%,#FEC125_17.77%,#FE983D_26.42%,#FE5F5E_36.5%,#FE2181_46.24%,#9000DC_85.57%)]  hover:bg-gradient-to-b from-gray-900 to-gray-900  
+                    <a href="https://www.instagram.com/almeakausaeterna?igsh=cm51aWgxOTN0NWl0" target="_blank"
+                        class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[linear-gradient(45deg,#FEE411_6.9%,#FEDB16_10.98%,#FEC125_17.77%,#FE983D_26.42%,#FE5F5E_36.5%,#FE2181_46.24%,#9000DC_85.57%)] 
                         ">
                         <svg class="w-[1.25rem] h-[1.125rem] text-white" viewBox="0 0 16 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -80,8 +75,8 @@
                         </svg>
 
                     </a>
-                    <a href="javascript:;"
-                        class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#337FFF]  hover:bg-gray-900 ">
+                    <a href="https://www.facebook.com/share/VuQmnJV3m4wr2rTN/?mibextid=LQQJ4d" target="_blank"
+                        class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#337FFF]">
                         <svg class="w-[1rem] h-[1rem] text-white" viewBox="0 0 8 14" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -91,14 +86,16 @@
 
                     </a>
                     <a href="javascript:;"
-                        class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#FF0000]  hover:bg-gray-900 ">
-                        <svg class="w-[1.25rem] h-[0.875rem] text-white" viewBox="0 0 16 12" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M13.9191 1.10651C14.558 1.27906 15.0602 1.78251 15.2299 2.42069C15.5388 3.57887 15.5388 5.99687 15.5388 5.99687C15.5388 5.99687 15.5388 8.41487 15.2299 9.57306C15.0578 10.2136 14.5556 10.7171 13.9191 10.8872C12.7638 11.1969 8.12875 11.1969 8.12875 11.1969C8.12875 11.1969 3.49603 11.1969 2.33844 10.8872C1.69952 10.7147 1.19735 10.2112 1.0276 9.57306C0.71875 8.41487 0.71875 5.99687 0.71875 5.99687C0.71875 5.99687 0.71875 3.57887 1.0276 2.42069C1.1997 1.78015 1.70188 1.27669 2.33844 1.10651C3.49603 0.796875 8.12875 0.796875 8.12875 0.796875C8.12875 0.796875 12.7638 0.796875 13.9191 1.10651ZM10.4981 5.99687L6.6481 8.22578V3.76796L10.4981 5.99687Z"
-                                fill="white" />
-                        </svg>
-
+                        class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#3b47e5]">
+                        <i class="ri-linkedin-box-line text-white text-base"></i>
+                    </a>
+                    <a href="https://wa.me/6285190000236" target="_blank"
+                        class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#29e354]">
+                        <i class="ri-whatsapp-line text-white"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@almeakausaeterna?is_from_webapp=1&sender_device=pc" target="_blank"
+                        class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#000000]">
+                        <i class="ri-tiktok-fill text-white"></i>
                     </a>
                 </div>
             </div>

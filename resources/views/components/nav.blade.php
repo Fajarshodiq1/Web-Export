@@ -47,35 +47,25 @@
                         <div class="bg-white rounded w-full relative z-10 py-1">
                             <ul class="list-reset">
                                 <li class="relative" @mouseenter="showChildren=true">
-                                    <a href="{{ route('about') }}#cpr"
+                                    <a href="/about?tab=why-us"
                                         class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                                        <span class="flex-1">CPR</span>
+                                        <span class="flex-1">Why Us</span>
+                                        <span class="ml-2"> <i class="mdi mdi-chevron-right"></i></span>
+                                    </a>
+                                </li>
+                                <li class="relative" @mouseenter="showChildren=true">
+                                    <a href="/about?tab=documentation"
+                                        class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                                        <span class="flex-1">Documentation</span>
                                         <span class="ml-2"> <i class="mdi mdi-chevron-right"></i> </span>
                                     </a>
                                 </li>
                                 <li class="relative" @mouseenter="showChildren=true">
-                                    <a href="{{ route('about') }}#value"
+                                    <a href="/about?tab=guideline"
                                         class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                                        <span class="flex-1">4 Values</span>
-                                        <span class="ml-2"> <i class="mdi mdi-chevron-right"></i> </span>
-                                    </a>
-                                </li>
-                                <li class="relative" @mouseenter="showChildren=true">
-                                    <a href=""
-                                        class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                                        <span class="flex-1">Process Production<span>
+                                        <span class="flex-1">Guideline to Process<span>
                                                 <span class="ml-2"> <i class="mdi mdi-chevron-right"></i> </span>
                                     </a>
-                                </li>
-                                <li class="relative" @mouseenter="showChildren=true">
-                                    <a href=""
-                                        class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                                        <span class="flex-1">Documentation</span> </a>
-                                </li>
-                                <li class="relative" @mouseenter="showChildren=true">
-                                    <a href=""
-                                        class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                                        <span class="flex-1">Guideline to Process</span> </a>
                                 </li>
                             </ul>
                         </div>

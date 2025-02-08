@@ -1,212 +1,98 @@
 <!-- FAQ -->
-<section class="w-full mx-auto max-w-[1280px] lg:px-[52px] gap-y-5 flex flex-col md:flex-row gap-x-10 h-[50vh]">
-    <div class="hs-accordion-group w-full mx-auto">
-        <!-- Accordion Item 1 -->
-        <div class="hs-accordion bg-white border border-transparent drop-shadow-lg" id="hs-active-bordered-heading-one">
-            <button
-                class="hs-accordion-toggle inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-500">
-                What is the suitable payments that you provide?
-                <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5v14"></path>
-                </svg>
-                <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                </svg>
-            </button>
-            <div id="hs-basic-active-bordered-collapse-one"
-                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
-                <div class="pb-4 px-5">
-                    <p class="text-gray-800">T/T or LC at sight</p>
-                </div>
-            </div>
-        </div>
-        <!-- Accordion Item 2 -->
-        <div class="hs-accordion bg-white border border-transparent drop-shadow-lg" id="hs-active-bordered-heading-two">
-            <button
-                class="hs-accordion-toggle inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-500">
-                Can i get the sample of your great product?
-                <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5v14"></path>
-                </svg>
-                <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                </svg>
-            </button>
-            <div id="hs-basic-active-bordered-collapse-two"
-                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
-                <div class="pb-4 px-5">
-                    <p class="text-gray-800">Yes, we will satisfy you with our sample for free.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Accordion Item 3 -->
-        <div class="hs-accordion bg-white border border-transparent drop-shadow-lg"
-            id="hs-active-bordered-heading-three">
-            <button
-                class="hs-accordion-toggle inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-500">
-                What type of quality that you have? And how you prove it?
-                <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5v14"></path>
-                </svg>
-                <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                </svg>
-            </button>
-            <div id="hs-basic-active-bordered-collapse-three"
-                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
-                <div class="pb-4 px-5">
-                    <p class="text-gray-800">Every product that we have already standarize with the export provision. We
-                        will satisfy you with providing any specification that you expact. We are inviting you to visit
-                        our warehouse for the comfortable transaction.</p>
-                </div>
-            </div>
-        </div>
-        <div class="hs-accordion bg-white border border-transparent drop-shadow-lg"
-            id="hs-active-bordered-heading-four">
-            <button
-                class="hs-accordion-toggle inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-500">
-                Can i request for the packing of the products?
-                <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5v14"></path>
-                </svg>
-                <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                </svg>
-            </button>
-            <div id="hs-basic-active-bordered-collapse-four"
-                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
-                <div class="pb-4 px-5">
-                    <p class="text-gray-800">Offcourse you choose your own packing requirement.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="hs-accordion-group w-full mx-auto">
-        <!-- Accordion Item 1 -->
-        <div class="hs-accordion bg-white border border-transparent drop-shadow-lg"
-            id="hs-active-bordered-heading-one">
-            <button
-                class="hs-accordion-toggle inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-500">
-                Where is your company located?
-                <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5v14"></path>
-                </svg>
-                <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                </svg>
-            </button>
-            <div id="hs-basic-active-bordered-collapse-one"
-                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
-                <div class="pb-4 px-5">
-                    <p class="text-gray-800">We are located at Surabaya city, East of Java, Indonesia.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Accordion Item 2 -->
-        <div class="hs-accordion bg-white border border-transparent drop-shadow-lg"
-            id="hs-active-bordered-heading-two">
-            <button
-                class="hs-accordion-toggle inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-500">
-                How long you can process the product that i expect?
-                <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5v14"></path>
-                </svg>
-                <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                </svg>
-            </button>
-            <div id="hs-basic-active-bordered-collapse-two"
-                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
-                <div class="pb-4 px-5">
-                    <p class="text-gray-800">Your product will be ready to deliver in 2 weeks or faster than you think.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Accordion Item 3 -->
-        <div class="hs-accordion bg-white border border-transparent drop-shadow-lg"
-            id="hs-active-bordered-heading-three">
-            <button
-                class="hs-accordion-toggle inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-500">
-                Can we trust your company?
-                <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5v14"></path>
-                </svg>
-                <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                </svg>
-            </button>
-            <div id="hs-basic-active-bordered-collapse-three"
-                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
-                <div class="pb-4 px-5">
-                    <p class="text-gray-800">Almea Kausa Eterna is a company that legally and registered in Indonesia’s
-                        Ministry of Law and Human Rights.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Accordion Item 4 -->
-        <div class="hs-accordion bg-white border border-transparent drop-shadow-lg"
-            id="hs-active-bordered-heading-four">
-            <button
-                class="hs-accordion-toggle inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-500">
-                Is there any MOQ to have some transactions with your company?
-                <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5v14"></path>
-                </svg>
-                <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                </svg>
-            </button>
-            <div id="hs-basic-active-bordered-collapse-four"
-                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
-                <div class="pb-4 px-5">
-                    <p class="text-gray-800">Almea Kausa Eterna is a company that legally and registered in Indonesia’s
-                        Ministry of Law and Human Rights.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<section class="mx-auto max-w-[1280px] py-10 mb-24 md:mb-3">
+    <header class="flex flex-col text-center w-full mb-10 gap-y-5">
+        <h2 class="text-xl md:text-4xl font-extrabold tracking-tight text-gray-900 text-center uppercase">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-600 to-gray-700">
+                FAQ
+            </span>
+        </h2>
+    </header>
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-4 text-on-surface dark:text-on-surface-dark">
+        <article
+            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            <details>
+                <summary
+                    class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
+                    What are the suitable payment methods you provide?
+                </summary>
+                <p class="p-4 text-sm sm:text-base text-pretty">T/T or LC at sight.</p>
+            </details>
+        </article>
+        <article
+            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            <details>
+                <summary
+                    class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
+                    Can I get a sample of your product?
+                </summary>
+                <p class="p-4 text-sm sm:text-base text-pretty">Yes, we provide free samples for you.</p>
+            </details>
+        </article>
+        <article
+            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            <details>
+                <summary
+                    class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
+                    What type of quality do you offer? And how do you prove it?
+                </summary>
+                <p class="p-4 text-sm sm:text-base text-pretty">All our products comply with export standards. We
+                    provide detailed specifications upon request, and you are welcome to visit our warehouse for further
+                    verification.</p>
+            </details>
+        </article>
+        <article
+            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            <details>
+                <summary
+                    class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
+                    Can I request custom packaging for the products?
+                </summary>
+                <p class="p-4 text-sm sm:text-base text-pretty">Of course, you can choose your own packaging
+                    requirements.</p>
+            </details>
+        </article>
+        <article
+            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            <details>
+                <summary
+                    class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
+                    Do you provide international shipping?
+                </summary>
+                <p class="p-4 text-sm sm:text-base text-pretty">Yes, we ship worldwide with trusted logistics partners.
+                </p>
+            </details>
+        </article>
+        <article
+            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            <details>
+                <summary
+                    class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
+                    What is your average delivery time?
+                </summary>
+                <p class="p-4 text-sm sm:text-base text-pretty">Our standard delivery time is 7-15 business days,
+                    depending on location.</p>
+            </details>
+        </article>
+        <article
+            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            <details>
+                <summary
+                    class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
+                    Do you offer bulk order discounts?
+                </summary>
+                <p class="p-4 text-sm sm:text-base text-pretty">Yes, we provide competitive pricing for bulk purchases.
+                </p>
+            </details>
+        </article>
+        <article
+            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            <details>
+                <summary
+                    class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
+                    What are your customer support hours?
+                </summary>
+                <p class="p-4 text-sm sm:text-base text-pretty">Our support team is available 24/7 to assist you.</p>
+            </details>
+        </article>
+    </main>
 </section>

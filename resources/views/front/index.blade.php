@@ -1,38 +1,16 @@
 @extends('layouts.app')
 @section('content')
-    <style>
-        .hero-section {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 100vh;
-            /* Gambar memenuhi layar penuh */
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            /* Transisi gambar */
-        }
-
-        .slide.active {
-            opacity: 1;
-            /* Hanya gambar dengan kelas 'active' yang terlihat */
-        }
-    </style>
     <x-nav />
     {{-- hero --}}
-    <section class="hero-section relative overflow-hidden w-full h-[100vh]" id="hero">
+    <section x-data="{ activeIndex: 0, total: {{ count($heroes) }} }" x-init="setInterval(() => { activeIndex = (activeIndex + 1) % total }, 5000)" class="hero-section relative overflow-hidden w-full h-[100vh]"
+        id="hero">
         @foreach ($heroes as $index => $hero)
-            <div class="slide absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out {{ $index === 0 ? 'active' : '' }}"
-                style="background-image: url('{{ Storage::url($hero->thumbnail) }}');"></div>
+            <div class="slide w-full h-full bg-cover bg-center absolute top-0 left-0 transition-all duration-1000 ease-in-out"
+                style="background-image: url('{{ Storage::url($hero->thumbnail) }}');"
+                x-show="activeIndex === {{ $index }}" x-transition:enter="opacity-0 blur-md"
+                x-transition:enter-start="opacity-0 blur-md" x-transition:enter-end="opacity-100 blur-0"
+                x-transition:leave="opacity-100 blur-0" x-transition:leave-start="opacity-100 blur-0"
+                x-transition:leave-end="opacity-0 blur-md"></div>
         @endforeach
     </section>
     <section class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -61,232 +39,185 @@
                 top-quality products sourced from the best spice regions across Indonesia.</p>
         </div>
     </section>
-
-    {{-- paralax --}}
-
-    {{-- <section class="h-screen relative flex items-center justify-center">
-        <div class="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat opacity-80 bg-fixed"
-            style="background-image:url({{ asset('assets/footer.jpg') }})">
+    <section class="max-w-[1280px] w-full mx-auto relative px-5 lg:px-[52px] h-auto overflow-x-hidden mt-10 lg:mt-0">
+        <div class="md:my-10 flex justify-between">
+            <h1 class="text-xl md:text-4xl font-extrabold tracking-tight text-gray-900 title flex items-center">
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-600 to-gray-700">PRODUCT
+                    CENTER</span>
+            </h1>
+            <a href="{{ route('products') }}"
+                class="px-4 md:px-5 py-2 md:py-3 text-sm md:text-base bg-green-600 text-white rounded-full">See All
+                <i class="ri-arrow-right-s-line"></i></a>
         </div>
-        <div class="relative flex flex-col justify-center items-center max-w-[1280px] mx-auto text-center">
-            <h1 class="text-white text-4xl md:text-6xl font-bold">WHY US</h1>
+        {{-- Cek jumlah produk yang diambil --}}
+        {{-- <p class="mb-4">Total Products: {{ $products->count() }}</p> --}}
+        <div class="swiper multiple-slide-carousel swiper-container relative mt-12 md:mt-1">
+            <div class="swiper-wrapper md:mb-16">
+                @forelse ($products as $product)
+                    <a href="{{ route('front.details', ['product' => $product->slug]) }}"
+                        class="swiper-slide w-full md:px-4 md:w-1/2 xl:w-1/3 block"
+                        onclick="trackClick('{{ $product->slug }}')">
+                        <div
+                            class="mb-10 overflow-hidden duration-300 bg-white rounded-2xl dark:bg-dark-2 shadow-1 hover:shadow-3 dark:shadow-card dark:hover:shadow-3 min-h-[300px] lg:min-h-[450px] flex flex-col">
 
-            <!-- Kotak Ikon -->
-            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-white items-center">
-                <div class="p-6 bg-white bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg text-center">
-                    <i class="fas fa-lightbulb text-4xl"></i>
-                    <h3 class="mt-4 text-xl font-semibold">Innovative Solutions</h3>
-                    <p class="mt-2 text-sm">We bring fresh ideas and cutting-edge technology to every project.</p>
-                </div>
+                            <!-- Gambar dengan tinggi tetap -->
+                            <img src="{{ Storage::url($product->thumbnail) }}" alt="image"
+                                class="w-full h-[200px] lg:h-[300px] object-cover transition-transform duration-300 transform hover:scale-105" />
 
-                <div class="p-6 bg-white bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg text-center">
-                    <i class="fas fa-users text-4xl"></i>
-                    <h3 class="mt-4 text-xl font-semibold">Expert Team</h3>
-                    <p class="mt-2 text-sm">Our team consists of skilled professionals with deep industry knowledge.</p>
-                </div>
-
-                <div class="p-6 bg-white bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg text-center">
-                    <i class="fas fa-chart-line text-4xl"></i>
-                    <h3 class="mt-4 text-xl font-semibold">Proven Results</h3>
-                    <p class="mt-2 text-sm">We deliver measurable success and long-term value to our clients.</p>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    {{-- about us --}}
-    <section class="text-gray-600 body-font w-full md:max-w-[1280px] mx-auto md:px-5 lg:px-[52px] overflow-x-hidden">
-        <div
-            class="md:container px-4 md:mx-auto flex md:px-5 md:py-24 pb-10 md:pb-5 md:flex-row flex-col items-center w-full">
-            <div
-                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                <div class="text-center my-10">
-                    <h1 class="text-xl md:text-4xl font-extrabold tracking-tight text-gray-900 text-center title">
-                        <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-600 to-gray-700">WHY
-                            ALMEA KAUSA ETERNA?</span>
-                    </h1>
-                </div>
-                <p class="mb-8 leading-relaxed text-justify md:justify-normal">CV. ALMEA KAUSA ETERNA, we understand that
-                    not every region in Indonesia produces the same quality of spices. Each spice thrives under specific
-                    conditions, and we have the expertise to identify the regions that produce the finest spices for
-                    different needs. With a deep knowledge of Indonesia’s spice-producing regions and their seasonal
-                    patterns, we ensure you receive high-quality products at the best possible value for your business.</p>
-                <div class="flex flex-col md:flex-row w-full md:justify-start justify-center items-end gap-5">
-                    <a href=""
-                        class="inline-flex items-center justify-center text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded-full text-lg w-full">
-                        About us
-                    </a>
-
-                    <a href=""
-                        class="inline-flex items-center justify-center bg-white border-2 border-green-600 text-black py-2 px-6 focus:outline-none hover:bg-green-600 hover:text-white rounded-full text-lg w-full">
-                        Product
-                    </a>
-
-                </div>
-            </div>
-            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-full">
-                <img class="object-cover object-center rounded" alt="hero"
-                    src="https://almeakausaeterna.com/assets/Companyprofile/gambar2.jpg">
-            </div>
-        </div>
-    </section>
-    {{-- Category Product --}}
-    {{-- <section id="Categories" class="w-full max-w-[1280px] mx-auto px-5 lg:px-[52px] mt-[50px] h-[50vh]">
-        <div class="flex flex-col gap-8">
-            <!-- Header Section -->
-            <div class="text-center my-10">
-                <h1 class="text-xl md:text-4xl font-extrabold tracking-tight text-gray-900 text-center title">
-                    <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-600 to-gray-700">CATEGORY
-                        PRODUCT</span>
-                </h1>
-            </div>
-            <!-- Categories Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                @forelse ($categories as $itemCategory)
-                    <a href="{{ route('front.category', $itemCategory->slug) }}"
-                        class="card hover:shadow-2xl transition rounded-xl shadow-lg">
-                        <div class="flex items-center h-full rounded-3xl p-5 gap-3 bg-white">
-                            <img src="{{ Storage::url($itemCategory->icon) }}" class="w-[56px] h-[56px] flex-shrink-0"
-                                alt="icon">
-                            <div class="flex flex-col gap-1 overflow-hidden">
-                                <h3 class="font-semibold text-lg sm:text-xl leading-[24px] sm:leading-[27px] break-words">
-                                    {{ $itemCategory->name }}
+                            <!-- Wrapper konten -->
+                            <div class="p-8 text-start sm:p-9 md:p-7 xl:p-9 flex flex-col justify-between h-full">
+                                <h3>
+                                    <p
+                                        class="text-dark dark:text-white hover:text-green-600 mb-4 block text-sm font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
+                                        {{ $product->name }}
+                                    </p>
                                 </h3>
-                                <p class="font-medium text-sm sm:text-base text-aktiv-grey">{{ $itemCategory->tagline }}</p>
+                                <p class="text-sm md:text-base leading-relaxed text-body-color mb-7 flex-1">
+                                    {{ $product->about }}
+                                </p>
+
+                                <!-- Tombol -->
+                                <div
+                                    class="w-full flex items-center justify-center gap-2 border border-green whitespace-nowrap bg-green px-5 py-2 md:py-4 rounded-xl text-white text-center bg-green-600 text-xs md:text-base">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true" class="size-3.5 hidden md:flex">
+                                        <path fill-rule="evenodd"
+                                            d="M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    View Product
+                                </div>
                             </div>
                         </div>
                     </a>
+                    <script>
+                        function trackClick(slug) {
+                            fetch("{{ route('track.click') }}", {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                        "X-CSRF-TOKEN": "{{ csrf_token() }}"
+                                    },
+                                    body: JSON.stringify({
+                                        product: slug
+                                    })
+                                }).then(response => response.json())
+                                .then(data => console.log(data));
+                        }
+                    </script>
                 @empty
-                    <p class="text-center text-aktiv-grey">Belum ada data category</p>
+                    <p class="text-center text-gray-500">No products available.</p>
                 @endforelse
             </div>
-        </div>
-    </section> --}}
-    {{-- Card Product --}}
-    <section id="Trending" class="w-full max-w-[1280px] mx-auto px-5 lg:px-[52px] h-auto overflow-x-hidden">
-        <div class="flex flex-col gap-8">
-            <!-- Header Section -->
-            <div class="md:mt-10 flex justify-between">
-                <h1 class="text-xl md:text-4xl font-extrabold tracking-tight text-gray-900 title flex items-center">
-                    <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-600 to-gray-700">PRODUCT
-                        CENTER</span>
-                </h1>
-                <a href="{{ route('products') }}" class="px-5 py-3 bg-green-600 text-white rounded-full">See All <i
-                        class="ri-arrow-right-s-line"></i></a>
-            </div>
-            <!-- Modal -->
-            <div x-data="{ showModal: false, product: {} }">
-                <div x-show="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40">
-                    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
-                        <h2 class="text-xl font-bold text-gray-800 mb-4" x-text="product.name"></h2>
-                        <img :src="product.thumbnail" alt="Product Image" class="w-full h-40 object-cover rounded">
-                        <p class="text-gray-600 mt-2" x-text="product.about"></p>
-                        <button @click="showModal = false"
-                            class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Close</button>
-                    </div>
-                </div>
-
-                <!-- Products Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    @forelse ($products as $product)
-                        <a href="javascript:void(0)"
-                            class="card hover:shadow-md hover:shadow-green-400 transition rounded-3xl shadow-lg border">
-                            <div class="flex flex-col h-full justify-between rounded-3xl p-6 gap-6 bg-white">
-                                <!-- Product Thumbnail -->
-                                <div class="relative h-[200px] rounded-xl bg-[#D9D9D9] overflow-hidden">
-                                    <img src="{{ Storage::url($product->thumbnail) }}"
-                                        class="w-full h-full object-cover border" alt="thumbnail">
-                                    @if ($product->is_open)
-                                        <div
-                                            class="absolute top-3 left-3 flex items-center rounded-full py-2 px-4 gap-2 text-white bg-green-800 z-10">
-                                            <span class="font-semibold text-sm md:text-base">In Stock</span>
-                                        </div>
-                                    @else
-                                        <div
-                                            class="absolute top-3 left-3 flex items-center rounded-full py-2 px-4 gap-2 bg-aktiv-red text-white z-10">
-                                            <span class="font-semibold">CLOSED</span>
-                                        </div>
-                                    @endif
-                                </div>
-                                <!-- Product Details -->
-                                <div class="flex flex-col gap-3">
-                                    <h3
-                                        class="font-semibold md:text-xl leading-6 line-clamp-2 hover:line-clamp-none transition">
-                                        {{ $product->name }}
-                                    </h3>
-                                    <button class="flex items-start text-slate-400 gap-2"
-                                        @click="showModal = true; product = { 
-                                name: '{{ $product->name }}', 
-                                thumbnail: '{{ Storage::url($product->thumbnail) }}', 
-                                about: '{{ $product->about }}'
-                            }">
-                                        <i class="ri-eye-line"></i>View
-                                    </button>
-                                </div>
-                                <div class="text-white bg-green-600 hover:bg-green-700 p-4 rounded-lg text-center">View
-                                    Product</div>
-                            </div>
-                        </a>
-                    @empty
-                        <p class="text-center text-aktiv-grey">Belum ada data produk terbaru</p>
-                    @endforelse
-                </div>
-            </div>
-
-            <!-- Pagination -->
-            <div class="pagination mt-6">
-                {{ $products->links('vendor.pagination.tailwind') }}
+            <div class="absolute flex justify-center items-center m-auto left-0 right-0 w-fit bottom-12">
+                <button id="slider-button-left"
+                    class="swiper-button-prev group !p-2 flex justify-center items-center border border-solid border-green-600 !w-12 !h-12 transition-all duration-500 rounded-full  hover:bg-green-600 !-translate-x-16"
+                    data-carousel-prev>
+                    <svg class="h-5 w-5 text-green-600 group-hover:text-white" xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10.0002 11.9999L6 7.99971L10.0025 3.99719" stroke="currentColor" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button id="slider-button-right"
+                    class="swiper-button-next group !p-2 flex justify-center items-center border border-solid border-green-600 !w-12 !h-12 transition-all duration-500 rounded-full hover:bg-green-600 !translate-x-16"
+                    data-carousel-next>
+                    <svg class="h-5 w-5 text-green-600 group-hover:text-white" xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
-    {{-- CPR --}}
+    <section class="bg-slate-50  overflow-x-hidden">
+        <div class="text-gray-600 body-font w-full md:max-w-[1280px] mx-auto md:px-5 lg:px-[52px] pb-12">
+            <div
+                class="md:container px-4 md:mx-auto flex md:px-5 md:py-16 pb-10 md:pb-5 md:flex-row flex-col items-center w-full">
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                    <div class="text-center my-10">
+                        <h1 class="text-xl md:text-4xl font-extrabold tracking-tight text-gray-900 text-center title">
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-600 to-gray-700">WHY
+                                ALMEA KAUSA ETERNA?</span>
+                        </h1>
+                    </div>
+                    <p class="mb-8 leading-relaxed text-justify md:justify-normal text-xs md:text-base text-gray-950">CV.
+                        ALMEA
+                        KAUSA ETERNA,
+                        we understand
+                        that
+                        not every region in Indonesia produces the same quality of spices. Each spice thrives under specific
+                        conditions, and we have the expertise to identify the regions that produce the finest spices for
+                        different needs. With a deep knowledge of Indonesia’s spice-producing regions and their seasonal
+                        patterns, we ensure you receive high-quality products at the best possible value for your business.
+                    </p>
+                    <div class="flex flex-col md:flex-row w-full md:justify-start justify-center items-end gap-5">
+                        <a href="{{ route('about') }}"
+                            class="inline-flex items-center justify-center text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded-full md:text-lg w-full">
+                            About us
+                        </a>
+
+                        <a href="{{ route('products') }}"
+                            class="inline-flex items-center justify-center bg-white border-2 border-green-600 text-black py-2 px-6 focus:outline-none hover:bg-green-600 hover:text-white rounded-full md:text-lg w-full">
+                            Product
+                        </a>
+
+                    </div>
+                </div>
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-full">
+                    <!-- Slider -->
+                    <div x-data="{
+                        activeIndex: 0,
+                        totalSlides: {{ count($companies) }},
+                        next() {
+                            this.activeIndex = (this.activeIndex + 1) % this.totalSlides;
+                        },
+                        prev() {
+                            this.activeIndex = (this.activeIndex - 1 + this.totalSlides) % this.totalSlides;
+                        },
+                        autoSlide() {
+                            setInterval(() => {
+                                this.next();
+                            }, 6000);
+                        }
+                    }" x-init="autoSlide()" class="relative">
+                        <div class="relative overflow-hidden w-full min-h-96 bg-white rounded-lg">
+                            <div class="absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700"
+                                :style="`transform: translateX(-${activeIndex * 100}%)`">
+                                @forelse ($companies as $itemCompany)
+                                    <div class="w-full flex-shrink-0">
+                                        <img src="{{ Storage::url($itemCompany->thumbnail) }}" alt="Slide"
+                                            class="w-full h-full object-cover rounded-lg">
+                                    </div>
+                                @empty
+                                    <p>empty</p>
+                                @endforelse
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center absolute bottom-3 start-0 end-0 space-x-2">
+                            <template x-for="(dot, index) in totalSlides" :key="index">
+                                <div @click="activeIndex = index"
+                                    class="size-3 border border-gray-400 rounded-full cursor-pointer"
+                                    :class="activeIndex === index ? 'bg-green-700 border-green-700' : ''">
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                    <!-- End Slider -->
+
+                </div>
+            </div>
+        </div>
+    </section>
     <x-cpr />
-    {{-- 4 values --}}
     <x-4values />
-    {{-- track --}}
     <x-stats />
-    <div class="text-center my-10">
-        <h1 class="text-xl md:text-4xl font-extrabold tracking-tight text-gray-900 text-center title">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-600 to-gray-700">FAQ</span>
-        </h1>
-    </div>
     <x-faq />
-
     <x-footer />
-    <script>
-        // stats
-        function animateCounter(id, target) {
-            let count = 0;
-            const element = document.getElementById(id);
-            const duration = 2000; // Durasi animasi dalam ms
-            const stepTime = duration / target;
-
-            const timer = setInterval(() => {
-                count++;
-                element.textContent = count;
-                if (count >= target) {
-                    clearInterval(timer);
-                }
-            }, stepTime);
-        }
-
-        function startAnimation(entries, observer) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounter("counter1", 37);
-                    animateCounter("counter2", 21);
-                    observer.disconnect(); // Hentikan observer setelah animasi berjalan
-                }
-            });
-        }
-
-        const observer = new IntersectionObserver(startAnimation, {
-            root: null, // Memantau viewport
-            threshold: 0.5 // Animasi mulai ketika 50% elemen terlihat
-        });
-
-        observer.observe(document.getElementById("stats-section"));
-    </script>
+    <x-navIcon />
 @endsection

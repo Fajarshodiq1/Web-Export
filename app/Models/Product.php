@@ -42,4 +42,8 @@ class Product extends Model
     {
         return $this->hasMany(Spesification::class);
     }
+    public function clicks()
+    {
+        return $this->hasOne(ProductClick::class);
+    }
 }
