@@ -30,7 +30,7 @@
                 </li>
                 <li class="relative group hidden md:block" x-data="{ showChildren: false }" @mouseleave="showChildren=false"
                     @mouseenter="showChildren=true">
-                    <a href=""
+                    <a href="{{ route('about') }}"
                         class="md:bg-transparent hover:text-white block pl-3 pr-4 py-2 md:hover:text-green-700 text-white md:p-0 rouded md:rounded-none focus:outline-none border-b-2 border-transparent hover:border-green-500"
                         aria-current="page">
                         <span class="mr-1">About Us <i class="ri-arrow-down-s-line"></i></span>
@@ -89,34 +89,20 @@
                         <div class="bg-white rounded w-full relative z-10 py-1">
                             <ul class="list-reset">
                                 <li class="relative">
-                                    <a href=""
+                                    <a href="/about?tab=why-us"
                                         class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
                                         <span class="flex-1">Why Us</span>
                                         <span class="ml-2"><i class="mdi mdi-chevron-right"></i></span>
                                     </a>
                                 </li>
                                 <li class="relative">
-                                    <a href="{{ route('about') }}#tabs-home02"
-                                        class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                                        <span class="flex-1">Our Resource</span>
-                                        <span class="ml-2"><i class="mdi mdi-chevron-right"></i></span>
-                                    </a>
-                                </li>
-                                <li class="relative">
-                                    <a href=""
-                                        class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                                        <span class="flex-1">Process Production</span>
-                                        <span class="ml-2"><i class="mdi mdi-chevron-right"></i></span>
-                                    </a>
-                                </li>
-                                <li class="relative">
-                                    <a href=""
+                                    <a href="/about?tab=documentation"
                                         class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
                                         <span class="flex-1">Documentation</span>
                                     </a>
                                 </li>
                                 <li class="relative">
-                                    <a href=""
+                                    <a href="/about?tab=guideline"
                                         class="px-4 py-2 flex w-full items-start hover:bg-green-500 hover:text-white no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
                                         <span class="flex-1">Guideline to Process</span>
                                     </a>
@@ -137,11 +123,6 @@
                     <a href="{{ route('contact') }}"
                         class="md:bg-transparent hover:text-white block pl-3 pr-4 py-2 md:hover:text-green-700 text-white md:p-0 rouded md:rounded-none focus:outline-none border-b-2 border-transparent hover:border-green-500"
                         aria-current="page">Contact</a>
-                </li>
-                <li>
-                    <a href=""
-                        class="md:bg-transparent hover:text-white block pl-3 pr-4 py-2 md:hover:text-green-700 text-white md:p-0 rouded md:rounded-none focus:outline-none border-b-2 border-transparent hover:border-green-500"
-                        aria-current="page">Testimonial</a>
                 </li>
             </ul>
         </div>

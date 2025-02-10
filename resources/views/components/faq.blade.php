@@ -1,7 +1,7 @@
 <!-- FAQ -->
-<section class="mx-auto max-w-[1280px] py-10 mb-24 md:mb-3">
+<section class="mx-auto max-w-[1280px] pt-10 mb-10 lg:mb-24 md:mb-3 px-2">
     <header class="flex flex-col text-center w-full mb-10 gap-y-5">
-        <h2 class="text-xl md:text-4xl font-extrabold tracking-tight text-gray-900 text-center uppercase">
+        <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900 text-center uppercase">
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-600 to-gray-700">
                 FAQ
             </span>
@@ -9,7 +9,7 @@
     </header>
     <main class="grid grid-cols-1 md:grid-cols-2 gap-4 text-on-surface dark:text-on-surface-dark">
         <article
-            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            class="rounded-xl border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
             <details>
                 <summary
                     class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
@@ -19,7 +19,7 @@
             </details>
         </article>
         <article
-            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            class="rounded-xl border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
             <details>
                 <summary
                     class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
@@ -29,7 +29,7 @@
             </details>
         </article>
         <article
-            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            class="rounded-xl border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
             <details>
                 <summary
                     class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
@@ -41,7 +41,7 @@
             </details>
         </article>
         <article
-            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            class="rounded-xl border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
             <details>
                 <summary
                     class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
@@ -52,7 +52,7 @@
             </details>
         </article>
         <article
-            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            class="rounded-xl border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
             <details>
                 <summary
                     class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
@@ -63,7 +63,7 @@
             </details>
         </article>
         <article
-            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            class="rounded-xl border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
             <details>
                 <summary
                     class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
@@ -74,7 +74,7 @@
             </details>
         </article>
         <article
-            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            class="rounded-xl border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
             <details>
                 <summary
                     class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">
@@ -85,7 +85,7 @@
             </details>
         </article>
         <article
-            class="rounded-radius border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
+            class="rounded-xl border border-outline bg-surface-alt/40 dark:border-outline-dark dark:bg-surface-dark-alt/50">
             <details>
                 <summary
                     class="p-4 text-left cursor-pointer hover:bg-surface-alt/75 dark:hover:bg-surface-dark-alt/75 font-medium">

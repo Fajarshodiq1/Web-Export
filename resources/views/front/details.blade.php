@@ -193,7 +193,7 @@
                     <a href="https://wa.me/6285190000236" class="flex py-4 space-x-4">
                         <button type="button"
                             class="h-14 w-full px-6 py-2 font-semibold rounded-xl bg-green-600 hover:bg-green-500 text-white">
-                            Learn more
+                            BUY
                         </button>
                     </a>
                 </div>
@@ -218,8 +218,7 @@
                         class="swiper-slide w-full md:px-4 md:w-1/2 xl:w-1/3 block"
                         onclick="trackClick('{{ $product->slug }}')">
                         <div
-                            class="mb-10 overflow-hidden duration-300 bg-white rounded-2xl dark:bg-dark-2 shadow-1 hover:shadow-3 dark:shadow-card dark:hover:shadow-3 min-h-[300px] lg:min-h-[450px] flex flex-col">
-
+                            class="mb-10 overflow-hidden duration-300 bg-white rounded-2xl shadow-md hover:shadow-lg min-h-[300px] lg:min-h-[450px] flex flex-col">
                             <!-- Gambar dengan tinggi tetap -->
                             <img src="{{ Storage::url($product->thumbnail) }}" alt="image"
                                 class="w-full h-[200px] lg:h-[300px] object-cover transition-transform duration-300 transform hover:scale-105" />
@@ -232,7 +231,8 @@
                                         {{ $product->name }}
                                     </p>
                                 </h3>
-                                <p class="text-sm md:text-base leading-relaxed text-body-color mb-7 flex-1">
+                                <p
+                                    class="text-sm md:text-base leading-relaxed text-body-color mb-7 flex-1 min-h-[50px] line-clamp-2 hover:line-clamp-none">
                                     {{ $product->about }}
                                 </p>
 

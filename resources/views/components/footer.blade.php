@@ -1,19 +1,16 @@
-<div class="h-[30vh] md:h-[20vh] lg:h-[10vh]"></div>
-<footer class="w-full bg-gray-100 relative overflow-hidden"
+<footer class="w-full bg-gray-100 relative overflow-hidden h-full"
     style="background-image: url('{{ asset('assets/footer.jpg') }}'); background-size: cover; background-position: center;">
     <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Elemen ini menambahkan lapisan gelap -->
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <!--Grid-->
         <div
-            class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-3 gap-y-8 md:gap-8 py-10 max-w-sm mx-auto sm:max-w-3xl lg:max-w-full">
+            class="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-5 gap-3 gap-y-8 md:gap-8 py-10 max-w-sm mx-auto sm:max-w-3xl lg:max-w-full">
             <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0">
-                <a href="https://pagedone.io/" class="flex justify-center lg:justify-start gap-x-3">
+                <a href="https://pagedone.io/" class="flex justify-center lg:justify-start gap-x-3 mb-5">
                     <img src="{{ asset('assets/logo.png') }}" class="h-10" alt="">
                     <p class="flex items-center text-xl text-white font-semibold">Almea Kausa Eterna</p>
                 </a>
-                <p class="py-8 text-sm text-white lg:max-w-xs text-center lg:text-left">Trusted in more than 100
-                    countries & 5 million customers. Have any query? contact us we are here for you.</p>
-                <a href="javascript:;"
+                <a href="{{ route('contact') }}"
                     class="py-2.5 px-5 h-9 block w-fit bg-green-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-green-700 lg:mx-0">
                     Contact us
                 </a>
@@ -41,7 +38,7 @@
             <div class="lg:mx-auto text-left ">
                 <h4 class="text-lg text-white font-medium mb-7">Contact me</h4>
                 <p class="text-sm text-white leading-6 mb-7">Contact me to get the latest news from us</p>
-                <a href="javascript:;"
+                <a href="https://wa.me/6285190000236" target="_blank"
                     class="flex items-center justify-center gap-2 border border-green-600 rounded-full py-3 px-6 w-fit lg:mx-0  text-sm text-green-600 font-semibold transition-all duration-500 hover:bg-green-50">Fast
                     Contact <i class="ri-customer-service-line text-green-600"></i>
                 </a>
@@ -53,17 +50,6 @@
                 <span class="text-sm text-white ">©<a href="https://pagedone.io/">almeakausaeterna</a> 2024, All rights
                     reserved.</span>
                 <div class="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
-                    <a href="javascript:;"
-                        class="w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-gray-900">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                            fill="none">
-                            <g id="Social Media">
-                                <path id="Vector"
-                                    d="M11.3214 8.93666L16.4919 3.05566H15.2667L10.7772 8.16205L7.1914 3.05566H3.05566L8.47803 10.7774L3.05566 16.9446H4.28097L9.022 11.552L12.8088 16.9446H16.9446L11.3211 8.93666H11.3214ZM9.64322 10.8455L9.09382 10.0765L4.72246 3.95821H6.60445L10.1322 8.8959L10.6816 9.66481L15.2672 16.083H13.3852L9.64322 10.8458V10.8455Z"
-                                    fill="white" />
-                            </g>
-                        </svg>
-                    </a>
                     <a href="https://www.instagram.com/almeakausaeterna?igsh=cm51aWgxOTN0NWl0" target="_blank"
                         class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[linear-gradient(45deg,#FEE411_6.9%,#FEDB16_10.98%,#FEC125_17.77%,#FE983D_26.42%,#FE5F5E_36.5%,#FE2181_46.24%,#9000DC_85.57%)] 
                         ">
@@ -85,7 +71,7 @@
                         </svg>
 
                     </a>
-                    <a href="javascript:;"
+                    <a href="https://www.linkedin.com/company/cv-almea-kausa-eterna/" target="_blank"
                         class="relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#3b47e5]">
                         <i class="ri-linkedin-box-line text-white text-base"></i>
                     </a>

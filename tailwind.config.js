@@ -9,7 +9,6 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
         "./node_modules/tw-elements/js/**/*.js",
-        "./node_modules/versoly-ui/**/*.js",
     ],
     theme: {
         extend: {

@@ -22,9 +22,9 @@
         </div>
     </div>
     @include('components.faq')
-    <div class="text-center py-32 md:py-0 first">
+    <div class="text-center pb-32 md:py-0 first">
         <div class="text-center mt-20">
-            <h1 class="text-xl md:text-4xl font-extrabold tracking-tight text-gray-900 text-center title">
+            <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900 text-center title">
                 <span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-600 to-gray-700">CONTACT
                     US</span>

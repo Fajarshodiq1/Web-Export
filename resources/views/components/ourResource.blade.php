@@ -1,14 +1,13 @@
  <div class="w-full">
      <div x-show="openTab === 1" class="mt-10">
          <!-- Content -->
-         <div class="text-center my-10">
-             <h1 class="font-extrabold text-4xl">
-                 <span
-                     class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-600 to-gray-700">OUR
-                     RESOURCES
+         <header class="flex flex-col text-center w-full mb-10 gap-y-5">
+             <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900 text-center uppercase">
+                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-600 to-gray-700">
+                     OUR RESOURCE
                  </span>
-             </h1>
-         </div>
+             </h2>
+         </header>
          <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
          <script src="https://www.amcharts.com/lib/3/maps/js/indonesiaLow.js"></script>
          <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
@@ -116,12 +115,6 @@
          </style>
          <!-- Chart code -->
          <script>
-             /**
-              * Define SVG path for target icon
-              */
-             var targetSVG =
-                 "M256,0c-70.592,0-128,57.408-128,128c0,63.296,46.229,115.861,106.667,126.08v236.587 c0,11.776,9.536,21.333,21.333,21.333c11.797,0,21.333-9.557,21.333-21.333V254.08C337.771,243.861,384,191.296,384,128 C384,57.408,326.592,0,256,0z M234.667,128c-11.776,0-21.333-9.557-21.333-21.333s9.557-21.333,21.333-21.333 S256,94.891,256,106.667S246.443,128,234.667,128z";
-
              /**
               * Create the map
               */
@@ -238,8 +231,9 @@
                              "longitude": 132.8667
                          }
                      ].map(location => ({
-                         "svgPath": targetSVG,
-                         "scale": 0.07,
+                         "imageURL": "{{ asset('assets/map.png') }}", // Ganti dengan gambar yang valid
+                         "width": 34, // Sesuaikan ukuran gambar
+                         "height": 34,
                          "accessibleLabel": location.title,
                          "tabIndex": 2,
                          "zoomLevel": 5,
@@ -261,8 +255,6 @@
                      "rollOverScale": 1.5,
                      "selectedScale": 2,
                      "selectedColor": "#2D372D",
-                     "color": "red",
-                     "accessibleLabel": "[[title]]",
                      "descriptionWindowLeft": 80,
                      "descriptionWindowTop": 278,
                      "descriptionWindowWidth": 300,

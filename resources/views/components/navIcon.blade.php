@@ -5,7 +5,7 @@
                     class="ri-instagram-line text-orange-600 text-2xl"></i></a>
         </div>
         <div class="nds">
-            <a class="ilink" target="_blank" href=""><i
+            <a class="ilink" target="_blank" href="https://www.linkedin.com/company/cv-almea-kausa-eterna/"><i
                     class="ri-linkedin-box-fill text-blue-600 text-2xl"></i></a>
         </div>
         <div class="nds">

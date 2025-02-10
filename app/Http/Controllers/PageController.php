@@ -22,12 +22,12 @@ class PageController extends Controller
         return view('front.index', compact('heroes', 'products', 'companies')); 
     }
     public function details(Product $product)
-{   
-    $spesifications = $product->spesifications;
-    $products = Product::all(); 
+    {   
+        $spesifications = $product->spesifications;
+        $products = Product::all(); 
 
-    return view('front.details', compact('product', 'products', 'spesifications'));
-}
+        return view('front.details', compact('product', 'products', 'spesifications'));
+    }
 
 
      public function template()

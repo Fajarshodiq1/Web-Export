@@ -20,29 +20,30 @@
             <!-- ./ Breadcrumbs -->
         </div>
     </div>
-    <nav class="flex gap-x-4 md:gap-x-8 px-4 max-w-[1280px] w-full mx-auto" aria-label="Tabs" role="tablist"
-        aria-orientation="horizontal">
-        <button type="button"
-            class="border border-green-600 hs-tab-active:bg-green-600 hs-tab-active:text-white hs-tab-active:hover:text-white hs-tab-active:dark:text-white py-3 px-4 text-center flex-auto inline-flex justify-center items-center gap-x-2 bg-transparent text-[10px] md:text-sm font-medium text-gray-500 hover:text-green-600 focus:outline-none focus:text-green-600 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300 active"
-            id="fill-and-justify-item-1" aria-selected="true" data-hs-tab="#fill-and-justify-1"
-            aria-controls="fill-and-justify-1" role="tab">
-            WHY US
-        </button>
-        <button type="button"
-            class="border border-green-600 hs-tab-active:bg-green-600 hs-tab-active:text-white hs-tab-active:hover:text-white hs-tab-active:dark:text-white py-3 px-4 text-center flex-auto inline-flex justify-center items-center gap-x-2 bg-transparent text-[10px] md:text-sm font-medium text-gray-500 hover:text-green-600 focus:outline-none focus:text-green-600 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
-            id="fill-and-justify-item-2" aria-selected="false" data-hs-tab="#fill-and-justify-2"
-            aria-controls="fill-and-justify-2" role="tab">
-            DOCUMENTATION
-        </button>
-        <button type="button"
-            class="border border-green-600 hs-tab-active:bg-green-600 hs-tab-active:text-white hs-tab-active:hover:text-white hs-tab-active:dark:text-white py-3 px-4 text-center flex-auto inline-flex justify-center items-center gap-x-2 bg-transparent text-[10px] md:text-sm font-medium text-gray-500 hover:text-green-600 focus:outline-none focus:text-green-600 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
-            id="fill-and-justify-item-3" aria-selected="false" data-hs-tab="#fill-and-justify-3"
-            aria-controls="fill-and-justify-3" role="tab">
-            GUIDELINE TO PROCESS
-        </button>
-    </nav>
-
-    <div class="mt-3">
+    <header class="max-w-[1280px] w-full mx-auto px-4 md:px-0">
+        <nav class="flex gap-x-4 md:gap-x-8 px-1 md:px-3  border bg-white border-green-400 rounded-3xl py-1 md:py-3"
+            aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+            <button type="button"
+                class="hs-tab-active:bg-gray-50 hs-tab-active:border hs-tab-active:border-green-400 hs-tab-active:text-green-400 hs-tab-active:hover:text-green-400 hs-tab-active:dark:text-green-400 py-2 px-3 md:py-3 md:px-4 text-center flex-auto inline-flex justify-center items-center gap-x-2 bg-transparent text-[10px] md:text-sm font-medium text-gray-500 hover:text-green-600 focus:outline-none focus:text-green-600 rounded-2xl disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300 active"
+                id="fill-and-justify-item-1" aria-selected="true" data-hs-tab="#fill-and-justify-1"
+                aria-controls="fill-and-justify-1" role="tab">
+                WHY US
+            </button>
+            <button type="button"
+                class="hs-tab-active:bg-gray-50 hs-tab-active:border hs-tab-active:border-green-400 hs-tab-active:text-green-400 hs-tab-active:hover:text-green-400 hs-tab-active:dark:text-green-400 py-2 px-3 md:py-3 md:px-4 text-center flex-auto inline-flex justify-center items-center gap-x-2 bg-transparent text-[10px] md:text-sm font-medium text-gray-500 hover:text-green-600 focus:outline-none focus:text-green-600 rounded-xl disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                id="fill-and-justify-item-2" aria-selected="false" data-hs-tab="#fill-and-justify-2"
+                aria-controls="fill-and-justify-2" role="tab">
+                DOCUMENTATION
+            </button>
+            <button type="button"
+                class="hs-tab-active:bg-gray-50 hs-tab-active:border hs-tab-active:border-green-400 hs-tab-active:text-green-400 hs-tab-active:hover:text-green-400 hs-tab-active:dark:text-green-400 py-2 px-3 md:py-3 md:px-4 text-center flex-auto inline-flex justify-center items-center gap-x-2 bg-transparent text-[10px] md:text-sm font-medium text-gray-500 hover:text-green-600 focus:outline-none focus:text-green-600 rounded-xl disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                id="fill-and-justify-item-3" aria-selected="false" data-hs-tab="#fill-and-justify-3"
+                aria-controls="fill-and-justify-3" role="tab">
+                GUIDELINE TO PROCESS
+            </button>
+        </nav>
+    </header>
+    <section class="mt-3">
         <div id="fill-and-justify-1" role="tabpanel" aria-labelledby="fill-and-justify-item-1">
             <div class="mt-28"></div>
             <x-cpr />
@@ -151,7 +152,7 @@
         <div id="fill-and-justify-3" class="hidden" role="tabpanel" aria-labelledby="fill-and-justify-item-3">
             <x-guideLine />
         </div>
-    </div>
+    </section>
     <x-footer />
     <script>
         document.addEventListener("DOMContentLoaded", function() {
