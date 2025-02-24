@@ -1,4 +1,4 @@
-<section class="h-[90vh] md:h-[60vh] relative flex items-center justify-center" id="stats-section">
+<section class="h-[100vh] md:h-[60vh] relative flex items-center justify-center" id="stats-section">
     <div class="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style="background-image:url({{ asset('assets/turmeric.jpg') }})">
     </div>

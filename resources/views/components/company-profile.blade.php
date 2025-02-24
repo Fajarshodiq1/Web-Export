@@ -11,7 +11,7 @@
                         </span>
                     </h1>
                 </header>
-                <p class="mb-8 leading-relaxed text-justify md:text-left text-sm md:text-base text-gray-950">
+                <p class="mb-8 leading-relaxed text-justify text-sm md:text-base text-gray-950">
                     CV. ALMEA KAUSA ETERNA, we understand that not every region in Indonesia produces the same quality
                     of spices. Each spice thrives under specific conditions, and we have the expertise to identify the
                     regions that produce the finest spices for different needs. With a deep knowledge of Indonesia’s

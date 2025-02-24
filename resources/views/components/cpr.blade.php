@@ -1,6 +1,6 @@
  <section class="w-full max-w-[1280px] mx-auto px-5 lg:px-[52px] h-auto mb-20">
      <div class="text-center my-10">
-         <h1 class="text-xl md:text-4xl font-extrabold tracking-tight text-gray-900 text-center title">
+         <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900 text-center title">
              <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-600 to-gray-700">WHY
                  US?</span>
          </h1>
