@@ -139,5 +139,4 @@
     <x-stats />
     <x-faq />
     <x-footer />
-    <x-navIcon />
 @endsection
